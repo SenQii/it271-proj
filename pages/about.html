@@ -5,10 +5,52 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
   <script src="/main.js"></script>
   <script src="https://kit.fontawesome.com/fbfcff68ea.js" crossorigin="anonymous"></script>
   <link href='https://fonts.googleapis.com/css?family=Baloo Bhaijaan 2' rel='stylesheet'>
+
+  <script type="text/javascript">
+
+    function shift() {
+  
+      let icon = document.getElementById('moon');
+      let main = document.getElementById('main');
+      let side = document.getElementById('side');
+      let sendbtn = document.getElementById('sendbtn');
+    
+      //if its in light, convert it to dark
+      if (icon.classList.contains("moon")) {
+    
+        // remove moon icon 
+        icon.classList.remove("fa-solid", "fa-moon", "moon");
+        // add sun icon
+        icon.classList.add("fa-regular", "fa-sun", "sun");
+    
+        main.classList.add("dark");
+        side.classList.add("dark");
+        sendbtn.classList.add("dark");
+    
+      } else {
+    
+        //remove sun icon
+        icon.classList.remove("fa-regular", "fa-sun", "sun");
+        // add moon icon
+        icon.classList.add("fa-solid", "fa-moon", "moon");
+    
+    
+        main.classList.remove("dark");
+        side.classList.remove("dark");
+        sendbtn.classList.remove("dark");
+
+      }
+
+      
+    }
+
+  </script>
+
+
 
   <title>حول دربة</title>
 
@@ -36,14 +78,14 @@
     <ul class="menu  " dir="rtl" id="menu">
 
       <li class="right">
-        <a href="/contact.html" class='txt'>
+        <a href="./contact.html" class='txt'>
           <span class="txt">تواصل</span>
           <span class="icon"></span>
         </a>
       </li>
 
       <li class="right">
-        <a href="/about.html" class='txt'>
+        <a href="#" class='txt'>
           <span class="txt">حول</span>
           <span class="icon"></span>
         </a>
@@ -171,8 +213,7 @@
 
       <form>
         <textarea rows="5" cols="40" value="للاقتراحات">
-
-</textarea>
+        </textarea>
         <br />
         <input id='sendbtn' class='sendbutton' type="submit" name="إرسال" value="إرسال" />
       </form>

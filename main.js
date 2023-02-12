@@ -44,11 +44,11 @@ function dropPannle() {
 function shift() {
   
   let icon = document.getElementById('moon');
-  let nav = document.getElementById('nav');
   let main = document.getElementById('main');
   let side = document.getElementById('side');
   let secbtn = document.getElementById('sectionBtn');
   let sndbtn = document.getElementById('sendbtn');
+  let pbtn = document.getElementById('playbtn');
 
   //if its in light, convert it to dark
   if (icon.classList.contains("moon")) {
@@ -60,9 +60,8 @@ function shift() {
 
     main.classList.add("dark");
     side.classList.add("dark");
-    nav.classList.add("dark");
     secbtn.classList.add("dark");
-    sndbtn.classList.add("dark");
+    // pbtn.classList.add("dark");
 
   } else {
 
@@ -74,9 +73,8 @@ function shift() {
 
     main.classList.remove("dark");
     side.classList.remove("dark");
-    nav.classList.remove("dark");
     secbtn.classList.remove("dark");
-    sndbtn.classList.remove("dark");
+    // pbtn.classList.remove("dark");
 
 
 

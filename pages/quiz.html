@@ -5,10 +5,55 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
   <script src="/main.js"></script>
+  <script defer src="/svgs.js"></script>
+
   <script src="https://kit.fontawesome.com/fbfcff68ea.js" crossorigin="anonymous"></script>
   <link href='https://fonts.googleapis.com/css?family=Baloo Bhaijaan 2' rel='stylesheet'>
+
+  <script type="text/javascript">
+
+    function shift() {
+  
+      let icon = document.getElementById('moon');
+      let main = document.getElementById('main');
+      let side = document.getElementById('side');
+      let pbtn = document.getElementById('playbtn');
+    
+      //if its in light, convert it to dark
+      if (icon.classList.contains("moon")) {
+    
+        // remove moon icon 
+        icon.classList.remove("fa-solid", "fa-moon", "moon");
+        // add sun icon
+        icon.classList.add("fa-regular", "fa-sun", "sun");
+    
+        main.classList.add("dark");
+        side.classList.add("dark");
+        pbtn.classList.add("dark");
+    
+      } else {
+    
+        //remove sun icon
+        icon.classList.remove("fa-regular", "fa-sun", "sun");
+        // add moon icon
+        icon.classList.add("fa-solid", "fa-moon", "moon");
+    
+    
+        main.classList.remove("dark");
+        side.classList.remove("dark");
+        pbtn.classList.remove("dark");
+    
+    
+    
+    
+    
+      }
+    }
+
+  </script>
+
   <title>دربة</title>
 
 </head>
@@ -30,14 +75,14 @@
     <ul class="menu  " dir="rtl" id="menu">
 
       <li class="right">
-        <a href="/contact.html" class='txt'>
+        <a href="./contact.html" class='txt'>
           <span class="txt">تواصل</span>
           <span class="icon"></span>
         </a>
       </li>
 
       <li class="right">
-        <a href="/about.html" class='txt'>
+        <a href="./about.html" class='txt'>
           <span class="txt">حول</span>
           <span class="icon"></span>
         </a>
@@ -106,27 +151,31 @@
     </div>
 
     <div class="main" id="main" dir='rtl'>
-      <span class='header'> موقع دربة التعليمي </span>
 
+      
       <span class="mode" id="mode" onclick="shift()">
         <i class="fa-solid fa-moon moon" id="moon"></i>
       </span>
+      
 
+      <span class='header'> موقع دربة التعليمي </span>
 
       <span class="content">
 
 
-        <span class='sub-title'></span>
-        <br />
-        <span class='txt'></span>
-        <br />
-        <br />
+          <span class="sub-title" 
+            style="font-size:2.5em ;font-weight:500;"> فلنلعب لعبة أسئلة! </span>
+            <br>
+            <span class="txt" style="text-align:center ;"> سأسألك سؤالًا, جاوبه, ثم سأتحقق من صحة جوابك!</span > 
+          <br>
+          <a class="playbtn" id="playbtn" href="./game.html">
 
-        <span class='txt'></span>
-        <br />
-      </span>
-      <br />
-    </div>
+              العب
+
+            <img src="/imgs/exam-svgrepo-com.png" alt="">
+          </a>
+
+        
 
 
 

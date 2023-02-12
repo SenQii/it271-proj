@@ -1,16 +1,60 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="../style.css">
   <script src="/main.js"></script>
+  <script defer src="/quiz.js"></script>
+
   <script src="https://kit.fontawesome.com/fbfcff68ea.js" crossorigin="anonymous"></script>
   <link href='https://fonts.googleapis.com/css?family=Baloo Bhaijaan 2' rel='stylesheet'>
 
-  <title>للتواصل</title>
+  <script type="text/javascript">
+
+    function shift() {
+  
+      let icon = document.getElementById('moon');
+      let main = document.getElementById('main');
+      let side = document.getElementById('side');
+      let pbtn = document.getElementById('playbtn');
+    
+      //if its in light, convert it to dark
+      if (icon.classList.contains("moon")) {
+    
+        // remove moon icon 
+        icon.classList.remove("fa-solid", "fa-moon", "moon");
+        // add sun icon
+        icon.classList.add("fa-regular", "fa-sun", "sun");
+    
+        main.classList.add("dark");
+        side.classList.add("dark");
+        pbtn.classList.add("dark");
+    
+      } else {
+    
+        //remove sun icon
+        icon.classList.remove("fa-regular", "fa-sun", "sun");
+        // add moon icon
+        icon.classList.add("fa-solid", "fa-moon", "moon");
+    
+    
+        main.classList.remove("dark");
+        side.classList.remove("dark");
+        pbtn.classList.remove("dark");
+    
+    
+    
+    
+    
+      }
+    }
+
+  </script>
+
+  <title>دربة</title>
 
 </head>
 
@@ -18,30 +62,27 @@
   <div class="bg">
   </div>
 
-  <nav>
+
+  <nav class="" id="nav">
 
     <div class="logo">
-      <!--       <p>دربة</p> -->
       <a href="/index.html">
         <img src="/imgs/Logo.png" alt="">
-
       </a>
+
     </div>
-
-
-
 
     <ul class="menu  " dir="rtl" id="menu">
 
       <li class="right">
-        <a href="#" class='txt'>
+        <a href="./contact.html" class='txt'>
           <span class="txt">تواصل</span>
           <span class="icon"></span>
         </a>
       </li>
 
       <li class="right">
-        <a href="/about.html" class='txt'>
+        <a href="./about.html" class='txt'>
           <span class="txt">حول</span>
           <span class="icon"></span>
         </a>
@@ -55,7 +96,7 @@
       </li>
 
       <li class="middle">
-        <a href="/index.html" class='txt'>
+        <a href="#" class='txt'>
           <span class="txt">الرئيسية</span>
           <span class="icon"></span>
         </a>
@@ -107,41 +148,50 @@
 
       </ul>
 
-
     </div>
 
     <div class="main" id="main" dir='rtl'>
-      <span class='header'>للتواصل</span>
 
+      
       <span class="mode" id="mode" onclick="shift()">
         <i class="fa-solid fa-moon moon" id="moon"></i>
       </span>
+      
 
+      <span class='header'> موقع دربة التعليمي </span>
 
       <span class="content">
 
-      </span>
-      <span class="sub-title" style='text-align: center;
-  margin-top: -60px; text-decoration: none;'>
-        للإقتراحات أو الشكاوى أو الدعم الفني الرجاء التواصل معنا عن طريق : </span>
-      <br />
-      <span class="txt" style="font-weight: bold;">
 
-        الواتس اب : </span>
+        <form id="form" >
 
-      <a class="numberlink txt" href="https://wa.me/966508868914">0508868914</a><br \><br \>
-      <span class="txt" style="font-weight: bold;">
-        الايميل : </span>
-      <span>
-        dorbah@gmail.com
-      </span>
-      <br />
-      <br />
-    </div>
+            <span id="score">نقاطك : 4 </span>
+            <span id="quis"></span>
+    
+                <input
+                type="number"
+                id="Qinput" placeholder="اكتب جوابك" autofocus autocomplete="off"/>
+
+                <button
+                type="submit"
+                id= "Qbtn">
+                <span class="bbg"></span>
+                <span class="txt">
+                   أرسل إجابتك
+                </span>
+               </button>
+        </form>
+
+        
+
+
+
   </div>
-  </span>
+
+
   </div>
-  </div>
+
+
 </body>
 
 </html>
