@@ -1,3 +1,4 @@
+<!--   صفحة تطلع لو ضغط المستخدم أي جزء بالموقع ما اكتمل --> 
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,8 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
-  <script src="/main.js" type="module"></script>
-  
+  <script src="/main.js"></script>
   <script src="https://kit.fontawesome.com/fbfcff68ea.js" crossorigin="anonymous"></script>
   <link href='https://fonts.googleapis.com/css?family=Baloo Bhaijaan 2' rel='stylesheet'>
 
@@ -18,10 +18,7 @@
       let icon = document.getElementById('moon');
       let main = document.getElementById('main');
       let side = document.getElementById('side');
-      let pbtn = document.getElementById('playbtn');
-      let secbtn = document.getElementById('sectionBtn');
-      
-      
+      let sendbtn = document.getElementById('sendbtn');
     
       //if its in light, convert it to dark
       if (icon.classList.contains("moon")) {
@@ -33,9 +30,7 @@
     
         main.classList.add("dark");
         side.classList.add("dark");
-        pbtn.classList.add("dark");
-        secbtn.classList.add("dark");
-        
+        sendbtn.classList.add("dark");
     
       } else {
     
@@ -47,23 +42,89 @@
     
         main.classList.remove("dark");
         side.classList.remove("dark");
-        pbtn.classList.remove("dark");
-        secbtn.classList.remove("dark");
-        
-    
-    
-    
-    
-    
+        sendbtn.classList.remove("dark");
+
       }
+
+      
     }
 
   </script>
 
-  <title>موقع دربة - العب   </title>
+
+
+  <title>موقع دربة - نعتذر !  </title>
+  <style>
+.cta {
+  font-family:'Baloo Bhaijaan 2' ;
+ position: relative;
+ margin: auto;
+ padding: 12px 18px;
+ transition: all 0.2s ease;
+ border: none;
+ background: none;
+}
+
+.cta:before {
+ content: "";
+ position: absolute;
+ top: 0;
+ left: 0;
+ display: block;
+ border-radius: 50px;
+ background: #fff47a;
+ width: 45px;
+ height: 45px;
+ transition: all 0.3s ease;
+}
+
+.cta span {
+ position: relative;
+ font-family: 'Baloo Bhaijaan 2', sans-serif;
+ font-size: 18px;
+ font-weight: 700;
+ letter-spacing: 0.05em;
+ color: #234567;
+}
+
+.cta svg {
+ position: relative;
+ top: 0;
+ margin-left: 10px;
+ fill: none;
+ stroke-linecap: round;
+ stroke-linejoin: round;
+ stroke: #234567;
+ stroke-width: 2;
+ transform: translateX(-5px);
+ transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+ width: 100%;
+ background: #ffec1c;
+}
+
+.cta:hover svg {
+ transform: translateX(0);
+}
+
+.cta:active {
+ transform: scale(0.95);
+}
+
+
+
+
+
+    
+  </style>
 
 </head>
 
+
+
+  
 <body>
   <div class="bg">
   </div>
@@ -158,39 +219,50 @@
 
 
     <div class="main" id="main" dir='rtl'>
+      <span class='header'> نعتذر ! </span>
+<p>  لا يزال الموقع قيد التطوير! لم نقم بتجهيز هذه الصفحة حتى الآن, انتظرنا قريبًا.</p>
 
-      
+      <img src="/imgs/sorrypic.png" width="350px" height="350px">
+  
+ <button class="cta" onclick="goback()">
+  <span>عودة </span>
+  <svg viewBox="0 0 13 10" height="10px" width="15px">
+    <path d="M1,5 L11,5"></path>
+    <polyline points="8 1 12 5 8 9"></polyline>
+  </svg>
+</button>
+
+        
+      </span>
+    
       <span class="mode" id="mode" onclick="shift()">
         <i class="fa-solid fa-moon moon" id="moon"></i>
       </span>
-      
 
-      <span class='header'> موقع دربة التعليمي </span>
 
       <span class="content">
+        <span class="txt">
 
 
-          <span class="sub-title" 
-            style="font-size:2.5em ;font-weight:500;"> فلنلعب لعبة أسئلة! </span>
-            <br>
-            <span class="txt" style="text-align:center ;"> سأسألك سؤالًا, جاوبه, ثم سأتحقق من صحة جوابك!</span > 
-          <br>
-   
-        
-          <a class="playbtn" id="playbtn" href="./game.html">
+<div>
 
-              التالي 
 
-            <img src="/imgs/exam-svgrepo-com.png" alt="">
-          </a>
-        
-        <br/>
-<!--       <a href="./levelchoose.html">
-        <span id="sectionBtn" class="sectionBtn">
-          تحديد المستوى
+
+
+
+
+
+
+  
+</div>
+
+          
         </span>
-      </a> -->
-        
+      
+    </div>
+  </div>
+  </span>
+
 
 
 
@@ -198,7 +270,17 @@
 
 
   </div>
+<script>
+  
+function goback(){
 
+window.history.back();
+
+  
+}
+
+  
+</script>
 
 </body>
 

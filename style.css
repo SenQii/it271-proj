@@ -50,7 +50,9 @@ body{
 .main.dark .header,
 .dark .mode i,
 .dark .sub-title,
-.dark .txt{
+.dark .txt,
+form.dark  #score,
+form.dark  #quis{
   color:wheat;
 }
 
@@ -325,7 +327,11 @@ color: wheat;
 .numberlink{
    text-decoration:underline;
 }
-
+/* myprofile page */
+.signinlink{
+   text-decoration:underline;
+  font-size: 13px;
+}
 /* quiz page */
 .playbtn{
   position: relative;
@@ -372,6 +378,7 @@ color: wheat;
   border-radius: 100px;
   
 }
+/*  sectionBtn */
 
 /* game page */
 form{
@@ -382,7 +389,7 @@ form{
   justify-content: space-between;
 
   width: 100%;
-  height: 350px;
+  height: 300px;
 
   padding: 5px 20px;
 
@@ -420,22 +427,40 @@ form input[type=number]{
   background-color: transparent;
   text-align: center;
 }
-form #Qbtn .bbg{
+form.dark input[type=number]{
+   border-bottom: 1px solid #fff;
+  color:#fff;
+}
+
+form #Qbtn .bbg,
+form #Rbtn .bbg,
+#backgame .bbg{
   width: 1px;
   height: 1px;
-  background-color: #041C32;
+  background-color: #4b5b81;
   position: absolute;
   border-radius: 100px;
   z-index: 2 ;
   transition: 0.4s;
-
 }
-form #Qbtn .txt{
+
+form.dark #Qbtn .bbg,
+form.dark #Rbtn .bbg,
+.dark #backgame .bbg{
+  background-color: #fff;
+}
+
+form #Qbtn .txt,
+form #Rbtn .txt,
+#backgame .txt{
   width: fit-content;
   height: fit-content;
   z-index: 3;
 }
-form #Qbtn{
+
+form #Qbtn,
+form #Rbtn,
+#backgame{
   z-index: 1;
   position: relative;
   display: flex;
@@ -455,17 +480,106 @@ form #Qbtn{
   transition: .3s;
   background-color: #fff;
 }
-form #Qbtn:hover{
+
+form.dark #Qbtn,
+form.dark #Rbtn,
+.dark #backgame{
+  background-color: #041C32;
+  border: .25px solid #ffff;
+  
+}
+
+
+form #Qbtn:hover,
+form #Rbtn:hover,
+a #backgame:hover{
   transform: scale(1.25);
 }
-form #Qbtn:hover .txt{
+
+
+form #Qbtn:hover .txt,
+form #Rbtn:hover .txt,
+form #backgame:hover .txt{
   color: wheat;
 }
-form #Qbtn:hover .bbg{
+form.dark #Qbtn:hover .txt,
+form.dark #Rbtn:hover .txt,
+#backgame.dark:hover .txt{
+  color:black;
+}
+
+form #Qbtn:hover .bbg,
+form #Rbtn:hover .bbg,
+#backgame:hover .bbg{
   width: 102%;
   height: 102%;
 }
 
+
+
+/* choose sub  */
+ .button-name {
+ align-items: center;
+ appearance: none;
+ background-color: #FCFCFD;
+ border-radius: 4px;
+ border-width: 0;
+ box-shadow: rgba(45, 35, 66, 0.2) 0 2px 4px,rgba(45, 35, 66, 0.15) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+ box-sizing: border-box;
+ color: #36395A;
+ cursor: pointer;
+ display: inline-flex;
+ font-family: "JetBrains Mono",monospace;
+ height: 48px;
+ justify-content: center;
+ line-height: 1;
+ list-style: none;
+ overflow: hidden;
+/*  padding: 0 16px; */
+    padding: 1.4em;
+  margin:0px 0px 25px 15px;
+ position: relative;
+ text-align: left;
+ text-decoration: none;
+ transition: box-shadow .15s,transform .15s;
+ user-select: none;
+ -webkit-user-select: none;
+ touch-action: manipulation;
+ white-space: nowrap;
+ will-change: box-shadow,transform;
+ font-size: 18px;
+}
+
+.button-name:focus {
+ box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.button-name:hover {
+ box-shadow: rgba(45, 35, 66, 0.3) 0 4px 8px, rgba(45, 35, 66, 0.2) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+ transform: translateY(-2px);
+}
+
+.button-name:active {
+ box-shadow: #D6D6E7 0 3px 7px inset;
+ transform: translateY(2px);
+}
+
+.containercat{
+  display: flex;
+  padding: 20px;
+  align-items:center;
+  justify-content:center;
+} 
+
+.containercat span{
+   
+/*   background-color:red; */
+/*     padding-bottom:5.4rem ; */
+/*     margin-bottom: 2.4rem; */
+/*    display: block; */
+    
+  
+  }
 
 
 @media (max-width: 800px) {

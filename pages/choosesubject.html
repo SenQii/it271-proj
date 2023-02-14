@@ -1,3 +1,4 @@
+<!-- بعد اختيار تصنيف علوم  -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,8 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
-  <script src="/main.js" type="module"></script>
-  
+  <script src="/main.js"></script>
   <script src="https://kit.fontawesome.com/fbfcff68ea.js" crossorigin="anonymous"></script>
   <link href='https://fonts.googleapis.com/css?family=Baloo Bhaijaan 2' rel='stylesheet'>
 
@@ -18,10 +18,6 @@
       let icon = document.getElementById('moon');
       let main = document.getElementById('main');
       let side = document.getElementById('side');
-      let pbtn = document.getElementById('playbtn');
-      let secbtn = document.getElementById('sectionBtn');
-      
-      
     
       //if its in light, convert it to dark
       if (icon.classList.contains("moon")) {
@@ -33,9 +29,6 @@
     
         main.classList.add("dark");
         side.classList.add("dark");
-        pbtn.classList.add("dark");
-        secbtn.classList.add("dark");
-        
     
       } else {
     
@@ -47,25 +40,23 @@
     
         main.classList.remove("dark");
         side.classList.remove("dark");
-        pbtn.classList.remove("dark");
-        secbtn.classList.remove("dark");
-        
-    
-    
-    
-    
-    
+
       }
+      
     }
 
   </script>
 
-  <title>موقع دربة - العب   </title>
+
+  <title> موقع دربة - اختيار المادة  </title>
 
 </head>
 
+
+
+  
 <body>
-  <div class="bg">
+   <div class="bg">
   </div>
 
 
@@ -158,45 +149,48 @@
 
 
     <div class="main" id="main" dir='rtl'>
+      <span class='header'> اختر المادة </span>
 
-      
+       
+
       <span class="mode" id="mode" onclick="shift()">
         <i class="fa-solid fa-moon moon" id="moon"></i>
       </span>
-      
 
-      <span class='header'> موقع دربة التعليمي </span>
 
       <span class="content">
+        <div class="containercat">  
+          
+          <span>
+            <a href="./choosemath.html">
+              <button class="button-name">رياضيات</a>
+          </span>  
+          
+          <span>
+            <a  href="/pages/sorrypage.html">
+              <button class="button-name" >فيزياء</a>
+          </span>  
+          
+           <span>
+            <a  href="/pages/sorrypage.html">
+              <button class="button-name" >كيمياء</a>
+          </span> 
+          
+          <span>
+            <a  href="/pages/sorrypage.html">
+              <button class="button-name"  >أحياء</a>
+          </span>  
+          
+          <span>
+            <a  href="/pages/sorrypage.html">
+              <button class="button-name" >جيلوجيا</a>
+          </span>  
 
-
-          <span class="sub-title" 
-            style="font-size:2.5em ;font-weight:500;"> فلنلعب لعبة أسئلة! </span>
-            <br>
-            <span class="txt" style="text-align:center ;"> سأسألك سؤالًا, جاوبه, ثم سأتحقق من صحة جوابك!</span > 
-          <br>
-   
+    </div> 
         
-          <a class="playbtn" id="playbtn" href="./game.html">
-
-              التالي 
-
-            <img src="/imgs/exam-svgrepo-com.png" alt="">
-          </a>
-        
-        <br/>
-<!--       <a href="./levelchoose.html">
-        <span id="sectionBtn" class="sectionBtn">
-          تحديد المستوى
-        </span>
-      </a> -->
-        
-
-
-
-  </div>
-
-
+      </span>
+      
+    </div>
   </div>
 
 

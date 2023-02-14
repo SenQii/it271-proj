@@ -6,61 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../style.css">
-  <script src="/main.js" type="module"></script>
-  
+  <script src="/main.js"></script>
   <script src="https://kit.fontawesome.com/fbfcff68ea.js" crossorigin="anonymous"></script>
   <link href='https://fonts.googleapis.com/css?family=Baloo Bhaijaan 2' rel='stylesheet'>
 
-  <script type="text/javascript">
-
-    function shift() {
-  
-      let icon = document.getElementById('moon');
-      let main = document.getElementById('main');
-      let side = document.getElementById('side');
-      let pbtn = document.getElementById('playbtn');
-      let secbtn = document.getElementById('sectionBtn');
-      
-      
-    
-      //if its in light, convert it to dark
-      if (icon.classList.contains("moon")) {
-    
-        // remove moon icon 
-        icon.classList.remove("fa-solid", "fa-moon", "moon");
-        // add sun icon
-        icon.classList.add("fa-regular", "fa-sun", "sun");
-    
-        main.classList.add("dark");
-        side.classList.add("dark");
-        pbtn.classList.add("dark");
-        secbtn.classList.add("dark");
-        
-    
-      } else {
-    
-        //remove sun icon
-        icon.classList.remove("fa-regular", "fa-sun", "sun");
-        // add moon icon
-        icon.classList.add("fa-solid", "fa-moon", "moon");
-    
-    
-        main.classList.remove("dark");
-        side.classList.remove("dark");
-        pbtn.classList.remove("dark");
-        secbtn.classList.remove("dark");
-        
-    
-    
-    
-    
-    
-      }
-    }
-
-  </script>
-
-  <title>موقع دربة - العب   </title>
+  <title>موقع دربة - تسجيل الدخول  </title>
 
 </head>
 
@@ -158,48 +108,43 @@
 
 
     <div class="main" id="main" dir='rtl'>
+      <span class='header'>حسابي</span>
 
-      
       <span class="mode" id="mode" onclick="shift()">
         <i class="fa-solid fa-moon moon" id="moon"></i>
       </span>
-      
 
-      <span class='header'> موقع دربة التعليمي </span>
 
       <span class="content">
-
-
-          <span class="sub-title" 
-            style="font-size:2.5em ;font-weight:500;"> فلنلعب لعبة أسئلة! </span>
-            <br>
-            <span class="txt" style="text-align:center ;"> سأسألك سؤالًا, جاوبه, ثم سأتحقق من صحة جوابك!</span > 
-          <br>
-   
         
-          <a class="playbtn" id="playbtn" href="./game.html">
+      </span>
+      <span class="sub-title" style='text-align: center;
+  margin-top: -60px; text-decoration: none;'>
+ سجل دخولك       <br />
+<form>
+      <span class="txt" style="font-weight: bold;">
+ادخل اسم المستخدم :
+<br/>
+<input type="text" name = username ><br/>
+<span class="txt" style="font-weight: bold;">
+  ادخل رمز الدخول :
+  </span><br/>
+  <input type="password" name="passward" >
+  <br/>
+        <a href="/pages/index.html">
+  <button>تسجيل الدخول</button>
+        </a>
+</form>
+<br/>
+<a class="signinlink txt" href="/pages/myprofile.html">ليس لدي حساب على دربة !</a>
 
-              التالي 
-
-            <img src="/imgs/exam-svgrepo-com.png" alt="">
-          </a>
-        
-        <br/>
-<!--       <a href="./levelchoose.html">
-        <span id="sectionBtn" class="sectionBtn">
-          تحديد المستوى
-        </span>
-      </a> -->
-        
-
-
-
+<br\>
+    </div>
   </div>
-
-
+  </span>
   </div>
-
-
+  </div>
+  
 </body>
 
 </html>
